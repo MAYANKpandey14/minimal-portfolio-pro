@@ -115,6 +115,10 @@ export default {
 					'50%': {
 						transform: 'translateY(-15px)'
 					}
+				},
+				'spin-slow': {
+					from: { transform: 'rotate(0deg)' },
+					to: { transform: 'rotate(360deg)' }
 				}
 			},
 			animation: {
@@ -125,7 +129,8 @@ export default {
 				'slide-in-right': 'slide-in-right 0.3s ease-out',
 				'gradient-x': 'gradient-x 10s ease infinite',
 				'glow': 'glow 3s ease-in-out infinite',
-				'float': 'float 6s ease-in-out infinite'
+				'float': 'float 6s ease-in-out infinite',
+				'spin-slow': 'spin-slow 30s linear infinite'
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
