@@ -23,31 +23,25 @@ const Header = () => {
     <header 
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out py-4 px-6",
-        scrolled ? "backdrop-blur-lg bg-white/80 shadow-sm" : "bg-transparent"
+        scrolled ? "backdrop-blur-lg bg-white/70 shadow-sm border-b border-border/50" : "bg-transparent"
       )}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <a href="#" className="text-xl font-medium tracking-tight transition-opacity hover:opacity-80">
+        <a href="#" className="text-xl font-medium tracking-tight transition-opacity hover:opacity-80 font-mono">
           <span className="sr-only">Full Stack Developer</span>
-          <span className="inline-block">FSdev</span>
+          <span className="inline-block gradient-text">&lt;FSdev /&gt;</span>
         </a>
         
         <nav className="hidden md:flex space-x-8">
-          <a href="#about" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-            About
-          </a>
-          <a href="#skills" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-            Skills
-          </a>
-          <a href="#projects" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-            Projects
-          </a>
-          <a href="#hire-me" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-            Hire Me
-          </a>
-          <a href="#contact" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-            Contact
-          </a>
+          {navLinks.map((link) => (
+            <a 
+              key={link.href}
+              href={link.href} 
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {link.label}
+            </a>
+          ))}
         </nav>
         
         <div className="md:hidden">
@@ -66,5 +60,13 @@ const Header = () => {
     </header>
   );
 };
+
+const navLinks = [
+  { href: "#about", label: "About" },
+  { href: "#skills", label: "Skills" },
+  { href: "#projects", label: "Projects" },
+  { href: "#hire-me", label: "Hire Me" },
+  { href: "#contact", label: "Contact" }
+];
 
 export default Header;

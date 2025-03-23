@@ -5,7 +5,9 @@ const About = () => {
   return (
     <section id="about" className="section-container">
       <div className="max-w-3xl mx-auto text-center mb-16">
-        <h2 className="section-heading">About Me</h2>
+        <h2 className="section-heading">
+          <span className="gradient-text">About Me</span>
+        </h2>
         <p className="section-subheading">
           I build fast, efficient, and beautiful web applications with a focus on user experience and business objectives.
         </p>
@@ -13,20 +15,20 @@ const About = () => {
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {valueProps.map((prop) => (
-          <div key={prop.title} className="group p-6 rounded-xl border border-border bg-card hover:shadow-md transition-all duration-300">
+          <div key={prop.title} className="group tech-card p-6 rounded-xl glow-effect">
             <div className="mb-4 text-primary">
               <prop.icon size={28} className="group-hover:scale-110 transition-transform duration-300" />
             </div>
-            <h3 className="text-lg font-medium mb-2">{prop.title}</h3>
+            <h3 className="text-lg font-medium mb-2 font-mono">{prop.title}</h3>
             <p className="text-muted-foreground text-sm">{prop.description}</p>
           </div>
         ))}
       </div>
       
-      <div className="mt-16 lg:mt-24 bg-secondary/50 rounded-2xl p-8 md:p-12">
+      <div className="mt-16 lg:mt-24 bg-white/50 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-border/50 shadow-sm">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            <h3 className="text-2xl font-light mb-4 tracking-tight">My Approach</h3>
+            <h3 className="text-2xl font-light mb-4 tracking-tight font-mono">My Approach</h3>
             <p className="text-muted-foreground mb-6">
               I believe in creating clean, maintainable code that solves real business problems. My minimalist approach eliminates unnecessary complexity, resulting in faster, more reliable applications.
             </p>
@@ -42,26 +44,26 @@ const About = () => {
             </ul>
           </div>
           <div className="relative">
-            <div className="glass-panel rounded-xl p-6 md:p-8">
+            <div className="glass-panel rounded-xl p-6 md:p-8 animate-glow">
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
-                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">10+</div>
+                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-mono">10+</div>
                   <div>
-                    <h4 className="font-medium">Years of Experience</h4>
+                    <h4 className="font-medium font-mono">Years of Experience</h4>
                     <p className="text-sm text-muted-foreground">Building web applications</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">50+</div>
+                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-mono">50+</div>
                   <div>
-                    <h4 className="font-medium">Projects Delivered</h4>
+                    <h4 className="font-medium font-mono">Projects Delivered</h4>
                     <p className="text-sm text-muted-foreground">On time and on budget</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">30+</div>
+                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-mono">30+</div>
                   <div>
-                    <h4 className="font-medium">Happy Clients</h4>
+                    <h4 className="font-medium font-mono">Happy Clients</h4>
                     <p className="text-sm text-muted-foreground">Across various industries</p>
                   </div>
                 </div>
