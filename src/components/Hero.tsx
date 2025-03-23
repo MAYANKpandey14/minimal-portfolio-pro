@@ -72,36 +72,20 @@ const Hero = () => {
               </div>
             </div>
             
-            {/* Blob shape gradient background */}
+            {/* Blob shape gradient background - reduced size */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <div className="blob-shape w-[330px] h-[330px] bg-gradient-to-br from-primary/10 to-accent/10 animate-pulse filter blur-md" style={{ animationDuration: '8s' }}></div>
+              <div className="blob-shape w-[280px] h-[280px] bg-gradient-to-br from-primary/10 to-accent/10 animate-pulse filter blur-md" style={{ animationDuration: '8s' }}></div>
             </div>
             
-            {/* Code card with blob shape */}
-            <div className="relative z-10 blob-card p-8 shadow-xl border border-white/30 backdrop-blur-lg w-full max-w-[420px]">
-              <pre className="text-sm sm:text-base font-mono overflow-x-auto">
-                <code className="language-javascript">
-{`function Developer() {
-  const skills = [
-    'React', 'Next.js',
-    'TypeScript', 'Node.js',
-    'CSS', 'UI/UX'
-  ];
-  
-  const values = {
-    minimalism: true,
-    efficiency: true,
-    onTimeDelivery: true,
-    coffee: 'Always'
-  };
-  
-  return {
-    ...values,
-    coding: () => console.log('💻')
-  };
-}`}
-                </code>
-              </pre>
+            {/* Professional portrait in blob shape */}
+            <div className="relative z-10 w-[260px] h-[260px] overflow-hidden">
+              <div className="blob-card w-full h-full shadow-xl border border-white/30 backdrop-blur-lg flex items-center justify-center overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7" 
+                  alt="Professional Portrait" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -110,7 +94,7 @@ const Hero = () => {
   );
 };
 
-// Revolving tech icon component
+// Revolving tech icon component - increased size
 const RevolvingTechIcon = ({ Icon, position, label }: { Icon: any, position: number, label: string }) => {
   const angle = (position * Math.PI) / 180;
   const x = 50 + 48 * Math.cos(angle);
@@ -118,14 +102,14 @@ const RevolvingTechIcon = ({ Icon, position, label }: { Icon: any, position: num
   
   return (
     <div 
-      className="absolute flex flex-col items-center justify-center -translate-x-1/2 -translate-y-1/2 text-foreground/60 bg-white/80 shadow-sm backdrop-blur-sm p-2 rounded-full hover:scale-110 hover:text-primary transition-all border border-white/40"
+      className="absolute flex flex-col items-center justify-center -translate-x-1/2 -translate-y-1/2 text-foreground/60 bg-white/80 shadow-sm backdrop-blur-sm p-3 rounded-full hover:scale-110 hover:text-primary transition-all border border-white/40"
       style={{ 
         left: `${x}%`, 
         top: `${y}%`,
       }}
     >
-      <Icon size={24} className="opacity-80" />
-      <span className="text-[10px] mt-1 font-mono font-medium opacity-80">{label}</span>
+      <Icon size={28} className="opacity-80" />
+      <span className="text-[11px] mt-1 font-mono font-medium opacity-80">{label}</span>
     </div>
   );
 };
