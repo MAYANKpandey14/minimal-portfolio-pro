@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import { cn } from "@/lib/utils";
+import { Code, FileJson, Database, Globe, Server, Layout } from 'lucide-react';
 
 const Hero = () => {
   const [mounted, setMounted] = useState(false);
@@ -17,6 +18,16 @@ const Hero = () => {
         <div className="absolute top-3/4 left-1/2 w-32 h-32 rounded-full border border-accent/30"></div>
         <div className="absolute top-1/3 right-1/4 w-48 h-48 rounded-full border border-primary/20"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-accent/5 via-transparent to-transparent"></div>
+      </div>
+      
+      {/* Floating tech icons */}
+      <div className="absolute inset-0 -z-5 overflow-hidden">
+        <TechIcon Icon={Code} className="top-[15%] left-[10%] animate-float" delay={0} />
+        <TechIcon Icon={FileJson} className="top-[25%] right-[15%] animate-float" delay={1} />
+        <TechIcon Icon={Database} className="bottom-[30%] left-[20%] animate-float" delay={2} />
+        <TechIcon Icon={Globe} className="top-[40%] left-[30%] animate-float" delay={3} />
+        <TechIcon Icon={Server} className="bottom-[20%] right-[25%] animate-float" delay={4} />
+        <TechIcon Icon={Layout} className="bottom-[40%] right-[10%] animate-float" delay={5} />
       </div>
       
       <div className="max-w-7xl mx-auto w-full">
@@ -52,23 +63,30 @@ const Hero = () => {
             </div>
           </div>
           
-          <div className={cn("relative h-[400px] md:h-[500px] flex items-center justify-center opacity-0 transition-opacity duration-1000 delay-300", mounted && "opacity-100")}>
+          <div className={cn("relative h-[450px] md:h-[550px] flex items-center justify-center opacity-0 transition-opacity duration-1000 delay-300", mounted && "opacity-100")}>
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full bg-gradient-to-br from-primary/10 to-accent/10 animate-pulse" style={{ animationDuration: '6s' }}></div>
+              <div className="w-80 h-80 sm:w-96 sm:h-96 rounded-full bg-gradient-to-br from-primary/10 to-accent/10 animate-pulse" style={{ animationDuration: '6s' }}></div>
             </div>
-            <div className="relative z-10 glass-panel rounded-2xl p-8 rotate-3 shadow-xl border border-white/30 backdrop-blur-lg">
-              <pre className="text-xs sm:text-sm font-mono overflow-x-auto">
+            <div className="relative z-10 glass-panel rounded-2xl p-8 rotate-3 shadow-xl border border-white/30 backdrop-blur-lg w-full max-w-[420px]">
+              <pre className="text-sm sm:text-base font-mono overflow-x-auto">
                 <code className="language-javascript">
 {`function Developer() {
   const skills = [
-    'React', 'Node.js',
-    'TypeScript', 'UI/UX'
+    'React', 'Next.js',
+    'TypeScript', 'Node.js',
+    'CSS', 'UI/UX'
   ];
   
-  return {
-    coding: true,
-    deliverOnTime: true,
+  const values = {
+    minimalism: true,
+    efficiency: true,
+    onTimeDelivery: true,
     coffee: 'Always'
+  };
+  
+  return {
+    ...values,
+    coding: () => console.log('💻')
   };
 }`}
                 </code>
@@ -78,6 +96,23 @@ const Hero = () => {
         </div>
       </div>
     </section>
+  );
+};
+
+// Tech icon component
+const TechIcon = ({ Icon, className, delay = 0 }: { Icon: any, className?: string, delay?: number }) => {
+  return (
+    <div 
+      className={cn(
+        "absolute text-foreground/20 backdrop-blur-sm p-3 rounded-full",
+        className
+      )}
+      style={{ 
+        animationDelay: `${delay}s`,
+      }}
+    >
+      <Icon size={28} className="opacity-80" />
+    </div>
   );
 };
 
