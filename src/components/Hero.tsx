@@ -100,7 +100,7 @@ const Hero = () => {
               lg:w-[240px] lg:h-[240px]">
               <div className="blob-card w-full h-full border border-white/30 backdrop-blur-lg flex items-center justify-center overflow-hidden">
                 <img 
-                  src="/public/profile-pic.png" 
+                  src="/profile-pic.png" 
                   alt="Professional Portrait" 
                   className="w-full h-full object-cover"
                 />
