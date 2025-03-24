@@ -17,7 +17,7 @@ const Hero = () => {
       {/* Tech background pattern */}
       <div className="absolute inset-0 -z-10 opacity-10">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full border border-primary/30"></div>
-        <div className="absolute top-3/4 left-1/2 w-32 h-32 rounded-full border border-accent/30"></div>
+        <div className="absolute top-3/4 left-1/2 w-32 h-32 rounded-full border border-primary/30"></div>
         <div className="absolute top-1/3 right-1/4 w-48 h-48 rounded-full border border-primary/20"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-accent/5 via-transparent to-transparent"></div>
       </div>
@@ -59,13 +59,13 @@ const Hero = () => {
             mounted && "opacity-100",
             "h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px]"
           )}>
-            {/* Revolving tech icons - adjusted for responsiveness */}
+            {/* Revolving tech icons - adjusted for responsiveness and uniform appearance */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="relative rounded-full border border-primary/10 animate-spin-slow
-                w-[280px] h-[280px] 
-                sm:w-[320px] sm:h-[320px] 
-                md:w-[380px] md:h-[380px]
-                lg:w-[450px] lg:h-[450px]">
+                w-[300px] h-[300px] 
+                sm:w-[340px] sm:h-[340px] 
+                md:w-[400px] md:h-[400px]
+                lg:w-[480px] lg:h-[480px]">
                 <RevolvingTechIcon Icon={Code} position={0} label="JavaScript" />
                 <RevolvingTechIcon Icon={Figma} position={30} label="UI/UX" />
                 <RevolvingTechIcon Icon={Database} position={60} label="SQL" />
@@ -84,20 +84,20 @@ const Hero = () => {
             {/* Blob shape gradient background - responsive sizing */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div className="blob-shape bg-gradient-to-br from-primary/10 to-accent/10 animate-pulse filter blur-md
-                w-[200px] h-[200px]
-                sm:w-[220px] sm:h-[220px]
-                md:w-[240px] md:h-[240px]
-                lg:w-[260px] lg:h-[260px]" 
+                w-[180px] h-[180px]
+                sm:w-[200px] sm:h-[200px]
+                md:w-[220px] md:h-[220px]
+                lg:w-[240px] lg:h-[240px]" 
                 style={{ animationDuration: '8s' }}>
               </div>
             </div>
             
             {/* Professional portrait in blob shape - responsive sizing */}
             <div className="relative z-10 overflow-hidden
-              w-[180px] h-[180px]
-              sm:w-[200px] sm:h-[200px]
-              md:w-[220px] md:h-[220px]
-              lg:w-[240px] lg:h-[240px]">
+              w-[160px] h-[160px]
+              sm:w-[180px] sm:h-[180px]
+              md:w-[200px] md:h-[200px]
+              lg:w-[220px] lg:h-[220px]">
               <div className="blob-card w-full h-full shadow-xl border border-white/30 backdrop-blur-lg flex items-center justify-center overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7" 
@@ -113,27 +113,26 @@ const Hero = () => {
   );
 };
 
-// Revolving tech icon component - now with responsive sizing
+// Revolving tech icon component - now with responsive sizing and uniform appearance
 const RevolvingTechIcon = ({ Icon, position, label }: { Icon: any, position: number, label: string }) => {
   const isMobile = useIsMobile();
   
   // Calculate position based on angle - adjusted orbit radius for different screen sizes
   const angle = (position * Math.PI) / 180;
-  const radius = isMobile ? 43 : 46; // Smaller radius for mobile
+  const radius = isMobile ? 48 : 52; // Increased radius to move icons outward
   const x = 50 + radius * Math.cos(angle);
   const y = 50 + radius * Math.sin(angle);
   
-  // Calculate responsive sizes for icons
-  const iconSize = isMobile ? 20 : 28;
-  const fontSize = isMobile ? "text-[9px]" : "text-[11px]";
-  const padding = isMobile ? "p-2" : "p-3";
+  // Uniform sizes for all icons
+  const iconSize = isMobile ? 18 : 22;
+  const fontSize = isMobile ? "text-[8px]" : "text-[10px]";
   
   return (
     <div 
       className={`absolute flex flex-col items-center justify-center -translate-x-1/2 -translate-y-1/2 
-        text-foreground/60 bg-white/80 shadow-sm backdrop-blur-sm rounded-full 
+        text-foreground/70 bg-white/90 shadow-sm backdrop-blur-sm rounded-full 
         hover:scale-110 hover:text-primary transition-all border border-white/40
-        ${padding}`}
+        w-16 h-16 sm:w-16 sm:h-16 md:w-18 md:h-18 lg:w-20 lg:h-20`}
       style={{ 
         left: `${x}%`, 
         top: `${y}%`,
