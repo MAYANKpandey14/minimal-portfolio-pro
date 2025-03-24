@@ -92,7 +92,7 @@ const Contact = () => {
               <div>
                 <h4 className="font-medium">Email</h4>
                 <a
-                  href="mailto:hello@example.com"
+                  href="mailto:mayankpandeyofficial404@gmail.com"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   mayankpandeyofficial404@gmail.com
@@ -107,7 +107,7 @@ const Contact = () => {
               <div>
                 <h4 className="font-medium">Phone</h4>
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+917505728099"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   +91 7505728099
