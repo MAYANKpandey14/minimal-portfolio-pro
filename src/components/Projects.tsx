@@ -27,7 +27,7 @@ const Projects = () => {
               className={cn(
                 "px-4 py-2 text-sm font-medium rounded-full transition-all",
                 activeFilter === category.id 
-                  ? "bg-white shadow-sm" 
+                  ? "bg-primary shadow-sm text-white" 
                   : "text-muted-foreground hover:text-foreground"
               )}
             >

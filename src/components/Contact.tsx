@@ -21,15 +21,6 @@ const Contact = () => {
       [name]: value
     }));
   };
-<<<<<<< HEAD
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    console.log(formData.email, formData.name, formData.subject, formData.message);
-    // Simulate form submission
-    setTimeout(() => {
-=======
   
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -37,9 +28,9 @@ const Contact = () => {
     
     try {
       // You need to sign up at EmailJS.com and replace these with your actual service ID, template ID, and user ID
-      const serviceId = 'YOUR_EMAILJS_SERVICE_ID';
-      const templateId = 'YOUR_EMAILJS_TEMPLATE_ID';
-      const userId = 'YOUR_EMAILJS_USER_ID';
+      const serviceId = 'service_bpe5voc';
+      const templateId = 'template_udepoab';
+      const userId = 'ouORlV9j-mowgVeWm';
       
       const templateParams = {
         from_name: formData.name,
@@ -50,7 +41,6 @@ const Contact = () => {
       
       await emailjs.send(serviceId, templateId, templateParams, userId);
       
->>>>>>> c0536c49bc1a07a06f26b6a3a0c8af1099696d94
       toast({
         title: "Message sent successfully",
         description: "Thank you for reaching out. I'll get back to you soon!",
@@ -63,9 +53,6 @@ const Contact = () => {
         subject: '',
         message: ''
       });
-<<<<<<< HEAD
-
-=======
     } catch (error) {
       console.error('Email sending failed:', error);
       toast({
@@ -75,7 +62,6 @@ const Contact = () => {
         duration: 5000,
       });
     } finally {
->>>>>>> c0536c49bc1a07a06f26b6a3a0c8af1099696d94
       setIsSubmitting(false);
     }
   };

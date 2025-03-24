@@ -62,10 +62,10 @@ const Hero = () => {
             {/* Revolving tech icons - adjusted for responsiveness and uniform appearance */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="relative rounded-full border border-primary/10 animate-spin-slow
-                w-[300px] h-[300px] 
-                sm:w-[340px] sm:h-[340px] 
+                w-[280px] h-[280px] 
+                sm:w-[300px] sm:h-[300px] 
                 md:w-[400px] md:h-[400px]
-                lg:w-[480px] lg:h-[480px]">
+                lg:w-[460px] lg:h-[460px]">
                 <RevolvingTechIcon Icon={Code} position={0} label="JavaScript" />
                 <RevolvingTechIcon Icon={Figma} position={30} label="UI/UX" />
                 <RevolvingTechIcon Icon={Database} position={60} label="SQL" />
@@ -85,20 +85,20 @@ const Hero = () => {
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div className="blob-shape bg-gradient-to-br from-primary/10 to-accent/10 animate-pulse filter blur-md
                 w-[180px] h-[180px]
-                sm:w-[200px] sm:h-[200px]
-                md:w-[220px] md:h-[220px]
-                lg:w-[240px] lg:h-[240px]" 
-                style={{ animationDuration: '8s' }}>
+                sm:w-[240px] sm:h-[240px]
+                md:w-[260px] md:h-[260px]
+                lg:w-[280px] lg:h-[280px]" 
+                style={{ animationDuration: '10s' }}>
               </div>
             </div>
             
             {/* Professional portrait in blob shape - responsive sizing */}
             <div className="relative z-10 overflow-hidden
               w-[160px] h-[160px]
-              sm:w-[180px] sm:h-[180px]
-              md:w-[200px] md:h-[200px]
-              lg:w-[220px] lg:h-[220px]">
-              <div className="blob-card w-full h-full shadow-xl border border-white/30 backdrop-blur-lg flex items-center justify-center overflow-hidden">
+              sm:w-[200px] sm:h-[200px]
+              md:w-[220px] md:h-[220px]
+              lg:w-[240px] lg:h-[240px]">
+              <div className="blob-card w-full h-full border border-white/30 backdrop-blur-lg flex items-center justify-center overflow-hidden">
                 <img 
                   src="/public/profile-pic.png" 
                   alt="Professional Portrait" 
