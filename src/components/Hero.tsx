@@ -17,13 +17,8 @@ const Hero = () => {
       {/* Tech background pattern */}
       <div className="absolute inset-0 -z-10 opacity-10">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full border border-primary/30"></div>
-<<<<<<< HEAD
-        <div className="absolute top-3/4 left-1/2 w-32 h-32 rounded-full border border-accent/30"></div>
-        <div className="absolute top-1/3 right-1/4 w-4f8 h-48 rounded-full border border-primary/20"></div>
-=======
         <div className="absolute top-3/4 left-1/2 w-32 h-32 rounded-full border border-primary/30"></div>
         <div className="absolute top-1/3 right-1/4 w-48 h-48 rounded-full border border-primary/20"></div>
->>>>>>> c0536c49bc1a07a06f26b6a3a0c8af1099696d94
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-accent/5 via-transparent to-transparent"></div>
       </div>
       
@@ -60,16 +55,11 @@ const Hero = () => {
             </div>
           </div>
           
-<<<<<<< HEAD
-          <div className={ cn("relative h-[450px] md:h-[550px] flex items-center justify-center opacity-0 transition-opacity duration-1000 delay-300", mounted && "opacity-100")}>
-            {/* Revolving tech icons */}
-=======
           <div className={cn("relative flex items-center justify-center opacity-0 transition-opacity duration-1000 delay-300", 
             mounted && "opacity-100",
             "h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px]"
           )}>
             {/* Revolving tech icons - adjusted for responsiveness and uniform appearance */}
->>>>>>> c0536c49bc1a07a06f26b6a3a0c8af1099696d94
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="relative rounded-full border border-primary/10 animate-spin-slow
                 w-[300px] h-[300px] 
@@ -102,11 +92,6 @@ const Hero = () => {
               </div>
             </div>
             
-<<<<<<< HEAD
-            {/* Professional portrait in blob shape */}
-            <div className="relative z-10 w-[260px] h-[260px] overflow-hidden">
-              <div className="blob-card w-full h-full border border-white/30 backdrop-blur-lg flex items-center justify-center overflow-hidden">
-=======
             {/* Professional portrait in blob shape - responsive sizing */}
             <div className="relative z-10 overflow-hidden
               w-[160px] h-[160px]
@@ -114,7 +99,6 @@ const Hero = () => {
               md:w-[200px] md:h-[200px]
               lg:w-[220px] lg:h-[220px]">
               <div className="blob-card w-full h-full shadow-xl border border-white/30 backdrop-blur-lg flex items-center justify-center overflow-hidden">
->>>>>>> c0536c49bc1a07a06f26b6a3a0c8af1099696d94
                 <img 
                   src="/public/profile-pic.png" 
                   alt="Professional Portrait" 
