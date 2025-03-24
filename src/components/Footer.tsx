@@ -42,14 +42,14 @@ const Footer = () => {
               </a>
             </div>
             <p className="text-sm text-muted-foreground">
-              Email: <a href="mailto:hello@example.com" className="hover:text-foreground transition-colors">hello@example.com</a>
+              Email: <a href="mailto:mayankpandeyofficial404@gmail.com" className="hover:text-foreground transition-colors">mayankpandeyofficial404@gmail.com</a>
             </p>
           </div>
         </div>
 
         <div className="mt-12 pt-6 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} FSdev. All rights reserved.
+            © {currentYear} mayankPandey. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</a>
