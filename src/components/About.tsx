@@ -47,21 +47,21 @@ const About = () => {
             <div className="glass-panel rounded-xl p-6 md:p-8 animate-glow">
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
-                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-mono">10+</div>
+                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-mono">1+</div>
                   <div>
                     <h4 className="font-medium font-mono">Years of Experience</h4>
                     <p className="text-sm text-muted-foreground">Building web applications</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-mono">50+</div>
+                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-mono">5+</div>
                   <div>
                     <h4 className="font-medium font-mono">Projects Delivered</h4>
                     <p className="text-sm text-muted-foreground">On time and on budget</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-mono">30+</div>
+                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-mono">3+</div>
                   <div>
                     <h4 className="font-medium font-mono">Happy Clients</h4>
                     <p className="text-sm text-muted-foreground">Across various industries</p>

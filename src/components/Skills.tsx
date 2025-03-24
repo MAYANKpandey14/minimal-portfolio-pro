@@ -84,8 +84,7 @@ const backendSkills = [
   { name: "AWS / Cloud Infrastructure", level: "Advanced", percentage: 85 }
 ];
 
-const otherSkills = [
-  "Docker", "CI/CD", "Jest", "React Testing Library", 
+const otherSkills = [ 
   "Firebase", "Redux", "Figma", "Git", "Microservices",
   "Performance Optimization", "SEO", "Accessibility"
 ];
