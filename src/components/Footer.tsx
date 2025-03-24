@@ -7,14 +7,13 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-16">
           <div>
-            <a href="#" className="text-xl font-medium tracking-tight mb-4 inline-block">
-              FSdev
-            </a>
+            <a href="#" className="text-xl font-semibold tracking-tight mb-4 inline-block">
+              mayankPandey</a>
             <p className="text-muted-foreground text-sm max-w-xs">
               Building elegant digital solutions with a focus on efficiency and on-time delivery.
             </p>
           </div>
-          
+
           <div>
             <h4 className="font-medium mb-4">Quick Links</h4>
             <nav className="flex flex-col space-y-2">
@@ -25,7 +24,7 @@ const Footer = () => {
               <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Contact</a>
             </nav>
           </div>
-          
+
           <div>
             <h4 className="font-medium mb-4">Let's Connect</h4>
             <div className="flex space-x-4 mb-4">
@@ -47,7 +46,7 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        
+
         <div className="mt-12 pt-6 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
             © {currentYear} FSdev. All rights reserved.

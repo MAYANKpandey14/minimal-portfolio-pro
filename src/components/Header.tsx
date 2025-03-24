@@ -29,7 +29,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <a href="#" className="text-xl font-medium tracking-tight transition-opacity hover:opacity-80 font-mono">
           <span className="sr-only">Full Stack Developer</span>
-          <span className="inline-block gradient-text">&lt;FSdev /&gt;</span>
+          <span className="inline-block gradient-text">&lt;mayankPandey/&gt;</span>
         </a>
         
         <nav className="hidden md:flex space-x-8">

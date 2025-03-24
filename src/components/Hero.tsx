@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="absolute inset-0 -z-10 opacity-10">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full border border-primary/30"></div>
         <div className="absolute top-3/4 left-1/2 w-32 h-32 rounded-full border border-accent/30"></div>
-        <div className="absolute top-1/3 right-1/4 w-48 h-48 rounded-full border border-primary/20"></div>
+        <div className="absolute top-1/3 right-1/4 w-4f8 h-48 rounded-full border border-primary/20"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-accent/5 via-transparent to-transparent"></div>
       </div>
       
@@ -53,7 +53,7 @@ const Hero = () => {
             </div>
           </div>
           
-          <div className={cn("relative h-[450px] md:h-[550px] flex items-center justify-center opacity-0 transition-opacity duration-1000 delay-300", mounted && "opacity-100")}>
+          <div className={ cn("relative h-[450px] md:h-[550px] flex items-center justify-center opacity-0 transition-opacity duration-1000 delay-300", mounted && "opacity-100")}>
             {/* Revolving tech icons */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-[350px] h-[350px] md:w-[450px] md:h-[450px] rounded-full border border-primary/10 relative animate-spin-slow">
@@ -79,9 +79,9 @@ const Hero = () => {
             
             {/* Professional portrait in blob shape */}
             <div className="relative z-10 w-[260px] h-[260px] overflow-hidden">
-              <div className="blob-card w-full h-full shadow-xl border border-white/30 backdrop-blur-lg flex items-center justify-center overflow-hidden">
+              <div className="blob-card w-full h-full border border-white/30 backdrop-blur-lg flex items-center justify-center overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7" 
+                  src="/public/profile-pic.png" 
                   alt="Professional Portrait" 
                   className="w-full h-full object-cover"
                 />

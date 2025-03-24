@@ -12,7 +12,7 @@ const Contact = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -20,11 +20,11 @@ const Contact = () => {
       [name]: value
     }));
   };
-  
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+    console.log(formData.email, formData.name, formData.subject, formData.message);
     // Simulate form submission
     setTimeout(() => {
       toast({
@@ -32,14 +32,14 @@ const Contact = () => {
         description: "Thank you for reaching out. I'll get back to you soon!",
         duration: 5000,
       });
-      
+
       setFormData({
         name: '',
         email: '',
         subject: '',
         message: ''
       });
-      
+
       setIsSubmitting(false);
     }, 1500);
   };
@@ -52,7 +52,7 @@ const Contact = () => {
           Have a project in mind or want to discuss an opportunity? I'd love to hear from you.
         </p>
       </div>
-      
+
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
         <div className="lg:col-span-2 space-y-8">
           <div>
@@ -61,7 +61,7 @@ const Contact = () => {
               Feel free to reach out through the contact form or directly via email or phone.
             </p>
           </div>
-          
+
           <div className="space-y-6">
             <div className="flex items-start gap-4">
               <div className="p-2 rounded-full bg-primary/10 mt-0.5">
@@ -69,30 +69,30 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="font-medium">Email</h4>
-                <a 
-                  href="mailto:hello@example.com" 
+                <a
+                  href="mailto:hello@example.com"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  hello@example.com
+                  mayankpandeyofficial404@gmail.com
                 </a>
               </div>
             </div>
-            
+
             <div className="flex items-start gap-4">
               <div className="p-2 rounded-full bg-primary/10 mt-0.5">
                 <Phone className="h-5 w-5 text-primary" />
               </div>
               <div>
                 <h4 className="font-medium">Phone</h4>
-                <a 
-                  href="tel:+1234567890" 
+                <a
+                  href="tel:+1234567890"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  +1 (234) 567-890
+                  +91 7505728099
                 </a>
               </div>
             </div>
-            
+
             <div className="flex items-start gap-4">
               <div className="p-2 rounded-full bg-primary/10 mt-0.5">
                 <MessageSquare className="h-5 w-5 text-primary" />
@@ -113,18 +113,18 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="pt-8">
             <div className="bg-secondary/40 p-6 rounded-xl">
               <h4 className="font-medium mb-2">Current Availability</h4>
               <p className="text-sm text-muted-foreground">
-                I'm currently available for new projects starting from <span className="font-medium text-foreground">August 2024</span>. 
+                I'm currently available for new projects starting from <span className="font-medium text-foreground">August 2024</span>.
                 Let's schedule a call to discuss how I can help with your project.
               </p>
             </div>
           </div>
         </div>
-        
+
         <div className="lg:col-span-3">
           <form onSubmit={handleSubmit} className="glass-panel rounded-xl p-8 shadow-lg">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
@@ -153,7 +153,7 @@ const Contact = () => {
                 />
               </div>
             </div>
-            
+
             <div className="mb-6">
               <label htmlFor="subject" className="block text-sm font-medium mb-2">Subject</label>
               <input
@@ -166,7 +166,7 @@ const Contact = () => {
                 required
               />
             </div>
-            
+
             <div className="mb-6">
               <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
               <textarea
@@ -179,7 +179,7 @@ const Contact = () => {
                 required
               ></textarea>
             </div>
-            
+
             <button
               type="submit"
               disabled={isSubmitting}
