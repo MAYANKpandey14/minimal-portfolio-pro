@@ -68,23 +68,22 @@ const Header = () => {
       {/* Mobile menu - slides in from the right */}
       <div 
         className={cn(
-          "fixed inset-y-0 right-0 w-64 bg-white/95 backdrop-blur-md shadow-lg border-l border-border/20 p-6 transform transition-all duration-300 ease-in-out z-50 md:hidden",
-          scrolled ? "bg-white shadow-lg" : "bg-white/95",
+          "fixed inset-y-0 right-0 w-64 bg-white shadow-lg border-l border-border/20 transform transition-all duration-300 ease-in-out z-50 md:hidden flex flex-col",
           mobileMenuOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
-        <div className="flex flex-col h-full">
-          <div className="flex justify-end mb-6">
-            <button 
-              onClick={toggleMobileMenu}
-              className="text-accent p-2 hover:bg-accent/10 rounded-md transition-colors"
-              aria-label="Close menu"
-            >
-              <X size={20} />
-            </button>
-          </div>
-          
-          <nav className="flex flex-col space-y-6">
+        <div className="flex justify-end p-4">
+          <button 
+            onClick={toggleMobileMenu}
+            className="text-accent p-2 hover:bg-accent/10 rounded-md transition-colors"
+            aria-label="Close menu"
+          >
+            <X size={24} />
+          </button>
+        </div>
+        
+        <div className="flex flex-col h-full px-6">
+          <nav className="flex flex-col space-y-6 py-8">
             {navLinks.map((link) => (
               <a 
                 key={link.href}
@@ -97,7 +96,7 @@ const Header = () => {
             ))}
           </nav>
           
-          <div className="mt-auto pt-6">
+          <div className="mt-auto pb-8">
             <a 
               href="#contact" 
               className="inline-flex w-full items-center justify-center rounded-md bg-accent px-4 py-2 text-sm font-medium text-white shadow-md transition-colors hover:bg-accent/90"
