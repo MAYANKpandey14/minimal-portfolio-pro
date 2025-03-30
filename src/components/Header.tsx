@@ -43,7 +43,7 @@ const Header = () => {
             <a 
               key={link.href}
               href={link.href} 
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors"
             >
               {link.label}
             </a>
@@ -57,9 +57,9 @@ const Header = () => {
             onClick={toggleMobileMenu}
           >
             {mobileMenuOpen ? (
-              <X size={24} />
+              <X size={24} className="text-accent" />
             ) : (
-              <Menu size={24} />
+              <Menu size={24} className="text-accent" />
             )}
           </button>
         </div>
@@ -77,7 +77,7 @@ const Header = () => {
           <div className="flex justify-end mb-6">
             <button 
               onClick={toggleMobileMenu}
-              className="text-foreground p-2 hover:bg-accent/10 rounded-md transition-colors"
+              className="text-accent p-2 hover:bg-accent/10 rounded-md transition-colors"
               aria-label="Close menu"
             >
               <X size={20} />
@@ -89,7 +89,7 @@ const Header = () => {
               <a 
                 key={link.href}
                 href={link.href} 
-                className="text-base font-medium text-foreground hover:text-primary transition-colors py-2 border-b border-border/20"
+                className="text-base font-medium text-foreground hover:text-accent transition-colors py-2 border-b border-border/20"
                 onClick={toggleMobileMenu}
               >
                 {link.label}
@@ -100,7 +100,7 @@ const Header = () => {
           <div className="mt-auto pt-6">
             <a 
               href="#contact" 
-              className="inline-flex w-full items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-md transition-colors hover:bg-primary/90"
+              className="inline-flex w-full items-center justify-center rounded-md bg-accent px-4 py-2 text-sm font-medium text-white shadow-md transition-colors hover:bg-accent/90"
               onClick={toggleMobileMenu}
             >
               Contact Me

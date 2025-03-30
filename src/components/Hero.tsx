@@ -16,9 +16,9 @@ const Hero = () => {
     <section className="min-h-screen flex items-center relative overflow-hidden px-6 pt-20">
       {/* Tech background pattern */}
       <div className="absolute inset-0 -z-10 opacity-10">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full border border-primary/30"></div>
-        <div className="absolute top-3/4 left-1/2 w-32 h-32 rounded-full border border-primary/30"></div>
-        <div className="absolute top-1/3 right-1/4 w-48 h-48 rounded-full border border-primary/20"></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full border border-accent/30"></div>
+        <div className="absolute top-3/4 left-1/2 w-32 h-32 rounded-full border border-accent/30"></div>
+        <div className="absolute top-1/3 right-1/4 w-48 h-48 rounded-full border border-accent/20"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-accent/5 via-transparent to-transparent"></div>
       </div>
       
@@ -42,7 +42,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <a 
                 href="#projects" 
-                className="inline-flex h-11 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow-md transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                className="inline-flex h-11 items-center justify-center rounded-md bg-accent px-8 text-sm font-medium text-white shadow-md transition-colors hover:bg-accent/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
               >
                 View Projects
               </a>
@@ -61,7 +61,7 @@ const Hero = () => {
           )}>
             {/* Revolving tech icons - adjusted for responsiveness and uniform appearance */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="relative rounded-full border border-primary/10 animate-spin-slow
+              <div className="relative rounded-full border border-accent/20 animate-spin-slow
                 w-[280px] h-[280px] 
                 sm:w-[300px] sm:h-[300px] 
                 md:w-[400px] md:h-[400px]
@@ -83,7 +83,7 @@ const Hero = () => {
             
             {/* Blob shape gradient background - responsive sizing */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <div className="blob-shape bg-gradient-to-br from-primary/10 to-accent/10 animate-pulse filter blur-md
+              <div className="blob-shape bg-gradient-to-br from-accent/20 to-accent/10 animate-pulse filter blur-md
                 w-[180px] h-[180px]
                 sm:w-[240px] sm:h-[240px]
                 md:w-[260px] md:h-[260px]
@@ -131,7 +131,7 @@ const RevolvingTechIcon = ({ Icon, position, label }: { Icon: any, position: num
     <div 
       className={`absolute flex flex-col items-center justify-center -translate-x-1/2 -translate-y-1/2 
         text-foreground/70 bg-white/90 shadow-sm backdrop-blur-sm rounded-full 
-        hover:scale-110 hover:text-primary transition-all border border-white/40
+        hover:scale-110 hover:text-accent transition-all border border-white/40
         w-16 h-16 sm:w-16 sm:h-16 md:w-18 md:h-18 lg:w-20 lg:h-20`}
       style={{ 
         left: `${x}%`, 

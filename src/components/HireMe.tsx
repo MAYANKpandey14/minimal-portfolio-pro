@@ -14,8 +14,8 @@ const HireMe = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div className="glass-panel rounded-xl p-8 shadow-lg">
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-2 rounded-full bg-primary/10">
-              <Briefcase className="h-5 w-5 text-primary" />
+            <div className="p-2 rounded-full bg-accent/10">
+              <Briefcase className="h-5 w-5 text-accent" />
             </div>
             <h3 className="text-xl font-medium">Full-time Position</h3>
           </div>
@@ -27,8 +27,8 @@ const HireMe = () => {
           <ul className="space-y-3 mb-6">
             {fullTimeValues.map((value, index) => (
               <li key={index} className="flex items-start gap-3">
-                <div className="rounded-full bg-primary/10 p-1 mt-0.5">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <div className="rounded-full bg-accent/10 p-1 mt-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-accent"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 </div>
                 <span>{value}</span>
               </li>
@@ -40,7 +40,7 @@ const HireMe = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {fullTimeBenefits.map((benefit, index) => (
                 <div key={index} className="flex items-start gap-2">
-                  <benefit.icon className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <benefit.icon className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
                   <span className="text-sm">{benefit.text}</span>
                 </div>
               ))}
@@ -50,7 +50,7 @@ const HireMe = () => {
           <div className="mt-8">
             <a 
               href="#contact" 
-              className="inline-flex h-11 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring w-full"
+              className="inline-flex h-11 items-center justify-center rounded-md bg-accent px-8 text-sm font-medium text-white shadow transition-colors hover:bg-accent/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring w-full"
             >
               Let's Talk
             </a>
@@ -59,8 +59,8 @@ const HireMe = () => {
         
         <div className="glass-panel rounded-xl p-8 shadow-lg">
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-2 rounded-full bg-primary/10">
-              <FileCode className="h-5 w-5 text-primary" />
+            <div className="p-2 rounded-full bg-accent/10">
+              <FileCode className="h-5 w-5 text-accent" />
             </div>
             <h3 className="text-xl font-medium">Freelance Projects</h3>
           </div>
@@ -72,8 +72,8 @@ const HireMe = () => {
           <ul className="space-y-3 mb-6">
             {freelanceServices.map((service, index) => (
               <li key={index} className="flex items-start gap-3">
-                <div className="rounded-full bg-primary/10 p-1 mt-0.5">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <div className="rounded-full bg-accent/10 p-1 mt-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-accent"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 </div>
                 <span>{service}</span>
               </li>
@@ -85,8 +85,8 @@ const HireMe = () => {
             <div className="space-y-4">
               {freelanceProcess.map((step, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <div className="rounded-full bg-primary/10 h-6 w-6 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-xs font-medium text-primary">{index + 1}</span>
+                  <div className="rounded-full bg-accent/10 h-6 w-6 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-xs font-medium text-accent">{index + 1}</span>
                   </div>
                   <div>
                     <h5 className="font-medium text-sm">{step.title}</h5>
@@ -100,7 +100,7 @@ const HireMe = () => {
           <div className="mt-8">
             <a 
               href="#contact" 
-              className="inline-flex h-11 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring w-full"
+              className="inline-flex h-11 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent/10 hover:text-accent hover:border-accent/30 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring w-full"
             >
               Start a Project
             </a>

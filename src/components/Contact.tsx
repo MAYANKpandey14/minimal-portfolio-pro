@@ -86,14 +86,14 @@ const Contact = () => {
 
           <div className="space-y-6">
             <div className="flex items-start gap-4">
-              <div className="p-2 rounded-full bg-primary/10 mt-0.5">
-                <Mail className="h-5 w-5 text-primary" />
+              <div className="p-2 rounded-full bg-accent/10 mt-0.5">
+                <Mail className="h-5 w-5 text-accent" />
               </div>
               <div>
                 <h4 className="font-medium">Email</h4>
                 <a
                   href="mailto:mayankpandeyofficial404@gmail.com"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-muted-foreground hover:text-accent transition-colors"
                 >
                   mayankpandeyofficial404@gmail.com
                 </a>
@@ -101,14 +101,14 @@ const Contact = () => {
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="p-2 rounded-full bg-primary/10 mt-0.5">
-                <Phone className="h-5 w-5 text-primary" />
+              <div className="p-2 rounded-full bg-accent/10 mt-0.5">
+                <Phone className="h-5 w-5 text-accent" />
               </div>
               <div>
                 <h4 className="font-medium">Phone</h4>
                 <a
                   href="tel:+917505728099"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-muted-foreground hover:text-accent transition-colors"
                 >
                   +91 7505728099
                 </a>
@@ -116,19 +116,19 @@ const Contact = () => {
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="p-2 rounded-full bg-primary/10 mt-0.5">
-                <MessageSquare className="h-5 w-5 text-primary" />
+              <div className="p-2 rounded-full bg-accent/10 mt-0.5">
+                <MessageSquare className="h-5 w-5 text-accent" />
               </div>
               <div>
                 <h4 className="font-medium">Social Media</h4>
                 <div className="flex items-center gap-4 mt-2">
-                  <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                  <a href="#" className="text-muted-foreground hover:text-accent transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                   </a>
-                  <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                  <a href="#" className="text-muted-foreground hover:text-accent transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
                   </a>
-                  <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                  <a href="#" className="text-muted-foreground hover:text-accent transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2H2v10h10V2zM22 2h-8v10h10V2z"></path><path d="M2 22V12h20v10H2z"></path></svg>
                   </a>
                 </div>
@@ -158,7 +158,7 @@ const Contact = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all bg-background"
+                  className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all bg-background"
                   required
                 />
               </div>
@@ -170,7 +170,7 @@ const Contact = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all bg-background"
+                  className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all bg-background"
                   required
                 />
               </div>
@@ -184,7 +184,7 @@ const Contact = () => {
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all bg-background"
+                className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all bg-background"
                 required
               />
             </div>
@@ -197,7 +197,7 @@ const Contact = () => {
                 value={formData.message}
                 onChange={handleChange}
                 rows={5}
-                className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all bg-background resize-none"
+                className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all bg-background resize-none"
                 required
               ></textarea>
             </div>
@@ -205,7 +205,7 @@ const Contact = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="inline-flex h-11 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring w-full disabled:opacity-70"
+              className="inline-flex h-11 items-center justify-center rounded-md bg-accent px-8 text-sm font-medium text-white shadow transition-colors hover:bg-accent/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring w-full disabled:opacity-70"
             >
               {isSubmitting ? (
                 <svg className="animate-spin -ml-1 mr-3 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">

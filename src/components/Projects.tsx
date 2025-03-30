@@ -27,7 +27,7 @@ const Projects = () => {
               className={cn(
                 "px-4 py-2 text-sm font-medium rounded-full transition-all",
                 activeFilter === category.id 
-                  ? "bg-primary shadow-sm text-white" 
+                  ? "bg-accent shadow-sm text-white" 
                   : "text-muted-foreground hover:text-foreground"
               )}
             >
@@ -55,7 +55,7 @@ const Projects = () => {
                 className="h-full w-full bg-secondary/50 flex items-center justify-center group-hover:scale-105 transition-transform duration-500"
               >
                 <div className="h-20 w-20 flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="text-muted-foreground/50"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="M8 16h8"></path><path d="M8 12h8"></path></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="text-accent/70"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="M8 16h8"></path><path d="M8 12h8"></path></svg>
                 </div>
               </div>
             </div>
@@ -72,7 +72,7 @@ const Projects = () => {
               <div className="flex items-center gap-3">
                 <a 
                   href={project.liveUrl} 
-                  className="text-sm font-medium text-primary hover:underline inline-flex items-center gap-1"
+                  className="text-sm font-medium text-accent hover:underline inline-flex items-center gap-1"
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
@@ -82,7 +82,7 @@ const Projects = () => {
                 <span className="text-muted-foreground">|</span>
                 <a 
                   href={project.codeUrl} 
-                  className="text-sm font-medium text-primary hover:underline inline-flex items-center gap-1"
+                  className="text-sm font-medium text-accent hover:underline inline-flex items-center gap-1"
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
