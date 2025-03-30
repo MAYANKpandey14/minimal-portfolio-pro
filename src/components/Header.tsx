@@ -68,7 +68,7 @@ const Header = () => {
       {/* Mobile menu - slides in from the right */}
       <div 
         className={cn(
-          "fixed inset-y-0 right-0 w-64 bg-white shadow-lg border-l border-border/20 transform transition-all duration-300 ease-in-out z-50 md:hidden flex flex-col",
+          "fixed inset-y-0 right-0 w-64 bg-white/80 backdrop-blur-md shadow-lg border-l border-border/20 transform transition-all duration-300 ease-in-out z-50 md:hidden flex flex-col",
           mobileMenuOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
