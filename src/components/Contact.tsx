@@ -28,9 +28,9 @@ const Contact = () => {
     
     try {
       // You need to sign up at EmailJS.com and replace these with your actual service ID, template ID, and user ID
-      const serviceId = 'service_bpe5voc';
+      const serviceId = 'service_m7rigt9';
       const templateId = 'template_udepoab';
-      const userId = 'ouORlV9j-mowgVeWm';
+      const userId = '6HidT8_5_1sOJdafj';
       
       const templateParams = {
         from_name: formData.name,
@@ -38,6 +38,7 @@ const Contact = () => {
         subject: formData.subject,
         message: formData.message
       };
+      console.log(templateParams);
       
       await emailjs.send(serviceId, templateId, templateParams, userId);
       

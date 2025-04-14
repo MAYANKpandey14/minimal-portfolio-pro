@@ -102,10 +102,10 @@ export default {
 				},
 				'glow': {
 					'0%, 100%': {
-						'box-shadow': '0 0 10px rgba(120, 119, 198, 0.3), 0 0 20px rgba(120, 119, 198, 0.2)'
+						'box-shadow': '0 0 10px  rgba(77, 136, 248, 0.3), 0 0 20px rgba rgba(77, 136, 248, 0.2)'
 					},
 					'50%': {
-						'box-shadow': '0 0 20px rgba(120, 119, 198, 0.6), 0 0 40px rgba(120, 119, 198, 0.4)'
+						'box-shadow': '0 0 20px  rgba(77, 136, 248, 0.6), 0 0 40px  rgba(77, 136, 248, 0.4)'
 					}
 				},
 				'float': {

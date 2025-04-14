@@ -22,7 +22,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-accent/5 via-transparent to-transparent"></div>
       </div>
       
-      <div className="max-w-7xl mx-auto w-full">
+      <div className="max-w-6xl mx-auto w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className={cn("space-y-6", mounted && "animate-fade-up")}>
             <div className="inline-block">
@@ -83,11 +83,11 @@ const Hero = () => {
             
             {/* Blob shape gradient background - responsive sizing */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <div className="blob-shape bg-gradient-to-br from-accent/20 to-accent/10 animate-pulse filter blur-md
-                w-[180px] h-[180px]
-                sm:w-[240px] sm:h-[240px]
-                md:w-[260px] md:h-[260px]
-                lg:w-[280px] lg:h-[280px]" 
+              <div className="blob-shape bg-gradient-to-br from-accent/60 to-accent/30 animate-pulse filter blur-md
+                 w-[160px] h-[160px]
+              sm:w-[200px] sm:h-[200px]
+              md:w-[220px] md:h-[220px]
+              lg:w-[240px] lg:h-[240px]" 
                 style={{ animationDuration: '10s' }}>
               </div>
             </div>

@@ -16,7 +16,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 70% 13%;
 
-    --primary: 230 94% 64%;
+    --primary: 219 92.4% 63.7%;
     --primary-foreground: 230 70% 50%;
 
     --secondary: 210 40% 96.1%;
@@ -71,7 +71,7 @@
   }
 
   .blob-card {
-    @apply bg-white/80 backdrop-blur-md;
+    @apply bg-white backdrop-blur-md;
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     animation: blob-animation 12s ease-in-out infinite alternate;
     @apply flex items-center justify-center;

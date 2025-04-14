@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils";
 import { Menu, X } from 'lucide-react';
@@ -6,7 +5,7 @@ import { Menu, X } from 'lucide-react';
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
+
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 20;
@@ -26,7 +25,7 @@ const Header = () => {
   };
 
   return (
-    <header 
+    <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out py-4 px-6",
         scrolled ? "backdrop-blur-lg bg-white/70 shadow-sm border-b border-border/50" : "bg-transparent"
@@ -37,21 +36,21 @@ const Header = () => {
           <span className="sr-only">Full Stack Developer</span>
           <span className="inline-block gradient-text">&lt;mayankPandey/&gt;</span>
         </a>
-        
+
         <nav className="hidden md:flex space-x-8">
           {navLinks.map((link) => (
-            <a 
+            <a
               key={link.href}
-              href={link.href} 
+              href={link.href}
               className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors"
             >
               {link.label}
             </a>
           ))}
         </nav>
-        
+
         <div className="md:hidden">
-          <button 
+          <button
             className="text-foreground p-2 focus:outline-none"
             aria-label="Menu"
             onClick={toggleMobileMenu}
@@ -66,14 +65,14 @@ const Header = () => {
       </div>
 
       {/* Mobile menu - slides in from the right */}
-      <div 
+      <div
         className={cn(
-          "fixed inset-y-0 right-0 w-64 bg-white/80 backdrop-blur-md shadow-lg border-l border-border/20 transform transition-all duration-300 ease-in-out z-50 md:hidden flex flex-col",
+          "fixed inset-y-0 right-0 w-64 bg-white shadow-lg border-l border-border/20 transform transition-all duration-300 ease-in-out z-50 md:hidden flex flex-col h-screen",
           mobileMenuOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
         <div className="flex justify-end p-4">
-          <button 
+          <button
             onClick={toggleMobileMenu}
             className="text-accent p-2 hover:bg-accent/10 rounded-md transition-colors"
             aria-label="Close menu"
@@ -81,13 +80,13 @@ const Header = () => {
             <X size={24} />
           </button>
         </div>
-        
+
         <div className="flex flex-col h-full px-6">
           <nav className="flex flex-col space-y-6 py-8">
             {navLinks.map((link) => (
-              <a 
+              <a
                 key={link.href}
-                href={link.href} 
+                href={link.href}
                 className="text-base font-medium text-foreground hover:text-accent transition-colors py-2 border-b border-border/20"
                 onClick={toggleMobileMenu}
               >
@@ -95,10 +94,10 @@ const Header = () => {
               </a>
             ))}
           </nav>
-          
+
           <div className="mt-auto pb-8">
-            <a 
-              href="#contact" 
+            <a
+              href="#contact"
               className="inline-flex w-full items-center justify-center rounded-md bg-accent px-4 py-2 text-sm font-medium text-white shadow-md transition-colors hover:bg-accent/90"
               onClick={toggleMobileMenu}
             >
@@ -107,10 +106,10 @@ const Header = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Overlay when mobile menu is open */}
       {mobileMenuOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 md:hidden"
           onClick={toggleMobileMenu}
           aria-hidden="true"
