@@ -2,7 +2,8 @@
 import { useState } from 'react';
 import { Mail, MessageSquare, Phone } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
-import emailjs from 'emailjs-com';
+import { sendEmail } from '@/lib/email';
+
 
 const Contact = () => {
   const { toast } = useToast();
@@ -28,19 +29,24 @@ const Contact = () => {
     
     try {
       // You need to sign up at EmailJS.com and replace these with your actual service ID, template ID, and user ID
-      const serviceId = 'service_m7rigt9';
-      const templateId = 'template_udepoab';
-      const userId = '6HidT8_5_1sOJdafj';
-      
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
+      await sendEmail({
+        name: formData.name,
+        email: formData.email,
         subject: formData.subject,
-        message: formData.message
-      };
-      console.log(templateParams);
+        message: formData.message,
+      });
       
-      await emailjs.send(serviceId, templateId, templateParams, userId);
+      // Then store in Notion via serverless route
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
       
       toast({
         title: "Message sent successfully",
