@@ -7,7 +7,6 @@ import Projects from "@/components/Projects";
 import HireMe from "@/components/HireMe";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const Index = () => {
   return (
@@ -25,7 +24,6 @@ const Index = () => {
         <Projects />
         <HireMe />
         <Contact />
-      <SpeedInsights/>
       </main>
       <Footer />
     </div>
