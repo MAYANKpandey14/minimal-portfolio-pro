@@ -34,8 +34,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     });
 
     return res.status(200).json({ success: true });
-  } catch (err: any) {
-    console.error("Notion API Error:", err);
+  } catch (error) {
+    console.error("Notion API Error:", error);
     return res.status(500).json({ error: "Failed to add to Notion" });
   }
 }
