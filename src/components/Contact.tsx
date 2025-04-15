@@ -37,7 +37,7 @@ const Contact = () => {
       });
       
       // Then store in Notion via serverless route
-      await fetch("/api/contact", {
+      await fetch("/api/contact.ts", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

@@ -7,7 +7,7 @@ import Projects from "@/components/Projects";
 import HireMe from "@/components/HireMe";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const Index = () => {
   return (
@@ -17,7 +17,6 @@ const Index = () => {
         <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-b from-primary/5 to-transparent opacity-50 blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-to-t from-accent/5 to-transparent opacity-50 blur-3xl"></div>
       </div>
-      <Analytics/>
       <Header />
       <main>
         <Hero />
@@ -26,6 +25,7 @@ const Index = () => {
         <Projects />
         <HireMe />
         <Contact />
+      <SpeedInsights/>
       </main>
       <Footer />
     </div>
