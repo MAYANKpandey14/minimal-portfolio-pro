@@ -43,7 +43,7 @@ const Contact = () => {
           message: formData.message,
         }),
       });
-
+     console.log("API /contact - Raw req.body type:", typeof req.body);
       if (!notionResponse.ok) {
         const errorData = await notionResponse.json();
         throw new Error(errorData.error || "Failed to save contact info to Notion");
