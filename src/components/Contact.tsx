@@ -4,7 +4,6 @@ import { Mail, MessageSquare, Phone } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { sendEmail } from '@/lib/email';
 
-
 const Contact = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
@@ -37,7 +36,8 @@ const Contact = () => {
       });
       
       // Then store in Notion via serverless route
-      await fetch("/api/contact.ts", {
+      // Remove .ts extension here from the api path to target route correctly
+      await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -230,3 +230,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
