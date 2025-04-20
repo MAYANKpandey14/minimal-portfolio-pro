@@ -18,25 +18,21 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   console.log("Received contact info:", { name, email, subject, message });
 
   try {
-    // IMPORTANT: Adjusting to only send "Name" property, since your DB only shows that column
-    // If you want to send more, ensure your Notion DB has those properties with correct types
     await notion.pages.create({
       parent: { database_id: process.env.NOTION_DATABASE_ID! },
       properties: {
         Name: {
           title: [{ text: { content: name } }],
         },
-        // Remove Email, Company, Message properties for now to avoid errors
-        // Uncomment and adjust if you add them to your DB schema:
-        // Email: {
-        //   email,
-        // },
-        // Company: {
-        //   rich_text: [{ text: { content: subject || "N/A" } }],
-        // },
-        // Message: {
-        //   rich_text: [{ text: { content: message } }],
-        // },
+        Email: {
+          email: email,
+        },
+        Subject: {
+          rich_text: [{ text: { content: subject || "N/A" } }],
+        },
+        Message: {
+          rich_text: [{ text: { content: message } }],
+        },
       },
     });
 
