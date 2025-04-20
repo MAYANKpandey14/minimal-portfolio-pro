@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Mail, MessageSquare, Phone } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
@@ -27,7 +26,6 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      // You need to sign up at EmailJS.com and replace these with your actual service ID, template ID, and user ID
       await sendEmail({
         name: formData.name,
         email: formData.email,
@@ -35,9 +33,7 @@ const Contact = () => {
         message: formData.message,
       });
       
-      // Then store in Notion via serverless route
-      // Remove .ts extension here from the api path to target route correctly
-      await fetch("/api/contact", {
+      const notionResponse = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -47,7 +43,12 @@ const Contact = () => {
           message: formData.message,
         }),
       });
-      
+
+      if (!notionResponse.ok) {
+        const errorData = await notionResponse.json();
+        throw new Error(errorData.error || "Failed to save contact info to Notion");
+      }
+
       toast({
         title: "Message sent successfully",
         description: "Thank you for reaching out. I'll get back to you soon!",
@@ -60,11 +61,11 @@ const Contact = () => {
         subject: '',
         message: ''
       });
-    } catch (error) {
-      console.error('Email sending failed:', error);
+    } catch (error: any) {
+      console.error('Error:', error);
       toast({
         title: "Error sending message",
-        description: "There was a problem sending your message. Please try again later.",
+        description: error.message || "There was a problem sending your message. Please try again later.",
         variant: "destructive",
         duration: 5000,
       });
@@ -230,4 +231,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
