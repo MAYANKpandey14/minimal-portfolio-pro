@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Mail, MessageSquare, Phone } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
@@ -20,11 +21,11 @@ const Contact = () => {
       [name]: value
     }));
   };
-  
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
       await sendEmail({
         name: formData.name,
@@ -32,7 +33,7 @@ const Contact = () => {
         subject: formData.subject,
         message: formData.message,
       });
-      
+
       const notionResponse = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -43,7 +44,7 @@ const Contact = () => {
           message: formData.message,
         }),
       });
-     console.log("API /contact - Raw req.body type:", typeof req.body);
+
       if (!notionResponse.ok) {
         const errorData = await notionResponse.json();
         throw new Error(errorData.error || "Failed to save contact info to Notion");
