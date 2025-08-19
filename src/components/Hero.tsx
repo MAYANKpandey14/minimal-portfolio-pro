@@ -132,7 +132,7 @@ const RevolvingTechIcon = ({ Icon, position, label }: { Icon: any, position: num
       className={`absolute flex flex-col items-center justify-center -translate-x-1/2 -translate-y-1/2 
         text-foreground/70 bg-white/90 shadow-sm backdrop-blur-sm rounded-full 
         hover:scale-110 hover:text-accent transition-all border border-white/40
-        w-16 h-16 sm:w-16 sm:h-16 md:w-18 md:h-18 lg:w-20 lg:h-20`}
+        w-16 h-16 sm:w-16 sm:h-16 md:w-18 md:h-18 lg:w-20 lg:h-20 animate-spin-reverse`}
       style={{ 
         left: `${x}%`, 
         top: `${y}%`,

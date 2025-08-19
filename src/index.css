@@ -143,4 +143,18 @@
       @apply opacity-100 animate-glow;
     }
   }
+
+  /* Counter-rotation animation for tech icons */
+  .animate-spin-reverse {
+    animation: spin-reverse 20s linear infinite;
+  }
+
+  @keyframes spin-reverse {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(-360deg);
+    }
+  }
 }
