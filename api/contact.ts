@@ -1,8 +1,66 @@
 
 import { VercelRequest, VercelResponse } from "@vercel/node";
-import { addToNotion } from "@/lib/notion";
+import { Client } from "@notionhq/client";
+
+const notion = new Client({
+  auth: process.env.NOTION_TOKEN,
+});
+
+const addToNotion = async ({
+  name,
+  email,
+  company,
+  message,
+}: {
+  name: string;
+  email: string;
+  company: string;
+  message: string;
+}) => {
+  return await notion.pages.create({
+    parent: {
+      database_id: process.env.NOTION_DATABASE_ID!,
+    },
+    properties: {
+      Name: {
+        title: [
+          {
+            text: { content: name },
+          },
+        ],
+      },
+      Email: {
+        email,
+      },
+      Company: {
+        rich_text: [
+          {
+            text: { content: company || "N/A" },
+          },
+        ],
+      },
+      Message: {
+        rich_text: [
+          {
+            text: { content: message },
+          },
+        ],
+      },
+    },
+  });
+};
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
+  // Add CORS headers
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+  // Handle preflight OPTIONS request
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
