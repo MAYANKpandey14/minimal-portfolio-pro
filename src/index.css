@@ -146,7 +146,7 @@
 
   /* Counter-rotation animation for tech icons */
   .animate-spin-reverse {
-    animation: spin-reverse 20s linear infinite;
+    animation: spin-reverse 30s linear infinite;
   }
 
   @keyframes spin-reverse {
